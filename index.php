@@ -3,11 +3,17 @@
 //1
 ini_set('display_errors', 'on'); //2
 
-$db = new PDO('sqlite:./database.db'); //3
-// strange problem is no matter what I put after the 'sqlite:./' I still get the correct var_dump and it does not catch the error for the wrong database file searched for. 
+try {
+  $db = new PDO('sqlite:./database.db'); //3
+  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //5 so here you want to tell the browser that no matter what the exception is you want to throw an exception. We are setting the attribute to Error reporting and setting the mode to Throw exceptions. 
+  //4 
+  var_dump($db);
+  die();
+} catch(Exception $e) {
+  echo $e->getMessage();
+  die(); 
+}
 
-var_dump($db);
-die();
 
 ?> 
 
@@ -40,7 +46,5 @@ die();
 </body>
 
 </html>
-
-
 
 

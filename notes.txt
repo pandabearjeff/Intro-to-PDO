@@ -1,0 +1,4 @@
+//1 (remove before flight) first thing you want to do is enable error reporting.
+//2 not sure if on should be capitlized 
+//3 Inside of the PDO, the first thing that happens is we need a DSN which for us is sqlite: same folder (.)/database.db
+//4 strange problem is no matter what I put after the 'sqlite:./' I still get the correct var_dump and it does not catch the error for the wrong database file searched for. 

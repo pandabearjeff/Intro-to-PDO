@@ -1,0 +1,5 @@
+Some mistakes I made:
+
+- in the sqlite console commands: make sure you type in sqlite3 .database.db to select the databases in the console if you make a mistake you can exit sqlite3 with CTRL-C or with ');'  inside the ...> shell. 
+
+- do not put the var_dump value in quotations, it will dump it as a string. 
